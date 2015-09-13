@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS Style class Demo</title>
+	<link rel="stylesheet" href="layout.css">
+	<base target="_blank">
+</head>
+
+<body>
+	<header>
+		<h1>HTML5 Skeleton</h1>
+	</header>
+	
+	<nav>
+		<ul>
+			<li><a href="html5_semantic_elements.asp">HTML5 Semantic</a></li>
+			<li><a href="html5_geolocation.asp">HTML5 Geolocation</a></li>
+			<li><a href="html5_canvas.asp">HTML5 Graphics</a></li>
+		</ul>
+	</nav>
+
+	<section>
+
+		<h2>Famous Cities</h2>
+
+		<article>
+			<h2>London</h2>
+			<p><lfc>L</lfc>ondon is the capital city of England. It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants. It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants. It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+			</article>
+
+			<article>
+				<h2>Paris</h2>
+				<p>Paris is the capital and most populous city of France.</p>
+			</article>
+
+			<article>
+				<h2>Tokyo</h2>
+				<p>Tokyo is the capital of Japan, the center of the Greater Tokyo Area,
+					and the most populous metropolitan area in the world.</p>
+				</article>
+			</section>
+		</article>
+	</section>
+
+	<aside> <h2>aside</h2> <p>just type something to see where asider will be pleaced.</p></aside>
+
+	<footer>
+		<p>&copy; 2014 W3Schools. All rights reserved.</p>
+	</footer>
+	<hr>
+
+
+<!-- Test newly self-defined element in layout.css sheet, myHero -->
+	<myHero> my Hero element </myHero>
+
+
+<!-- test the usage of @media, which change the display style based on windowsize  -->
+	<hr>
+	<div class="media_usage">
+		Resize the browserwindow. When the width of this document is less than 500 pixels, the background-color is "lightblue", otherwise it is "lightgreen".
+	</div> <hr>
+
+
+<!-- Great! I can just use @media and float left to make responsive layout!, see .gridbox class in css file-->
+	<div class="gridbox" style="height:10%;"> box 1</div>
+	<div class="gridbox"> <div style="background:red;"> Box 2 in middle</div></div>
+	<div class="gridbox"> box 3</div> 
+	<hr></hr><hr> <hr style="clear:both;"> </hr>
+
+
+
+<!-- Test positioning elements in fixed and absolute position -->
+	<!-- the height of fixed and absolute positioned objects follow the window directly; while the above box 1 follow body and html height -->
+	<div style="position: fixed; left: 500px; bottom: 30px; z-index: 1;height:10%;"> Box fix positon, height:10%; </div>
+	<div style="height:150px; margin-left:400px;">
+		<hr>
+		<!-- if no top/bottom specificed in absolute position, it can be contained in a regular statically positioned div box, given the static box have enough height. -->
+			<div style="position: absolute; right:30px; z-index:1;height:5%;"> Box absolute position, height:5%;</div> 
+		<hr><hr><hr>
+		<!-- However, if top/bottom is specified, it is much harder to do that. -->
+			<!-- <div style="position: absolute; right:30px; bottom:10px;z-index:1;height:5%;"> Box absolute position, height:5%;</div> <hr> -->
+	</div>
+
+<!-- Test how to align a div horizontally in the center -->
+	<div> <p class="center" style="width:50%;border:1px solid;">horizontally center aligned paragraph.</p></div>
+
+
+<!-- Some cool shadow effects in test -->
+	<h1 style="text-shadow: 1px 1px 2px black; color: white;">Text-shadow effect!</h1>
+	<h1 style="text-shadow: 0 0 1em blue; color: white;">Text-shadow effect!</h1>
+	<h1 style="text-shadow: 0 0 0.2em darkblue; color: white;">Text-shadow effect!</h1>
+	<h1 style="text-shadow: 1px 1px 2px black, 0 0 1em blue; color: white;">Text-shadow effect!</h1>
+	<h1 style="text-shadow: 1px 1px 2px black, 0 0 0.2em darkblue; color: white;">Text-shadow effect!</h1>
+	<h1 style="text-shadow:  0 0 1em blue, 0 0 0.2em darkblue; color: white;">Text-shadow effect!</h1>
+	<h1 style="text-shadow: 1px 1px 2px black, 0 0 1em blue, 0 0 0.2em darkblue; color: white;">Text-shadow effect!</h1>
+
+
+<!-- Rotate an element -->
+	<h1 class="rotate" style="text-align:center; text-shadow:1px 1px 2px black,0 0 0.5em blue; color: white;">Text-shadow and Rotation effect!</h1>
+
+</body>
+</html>
+
+
+
+

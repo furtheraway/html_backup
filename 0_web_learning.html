@@ -1,0 +1,522 @@
+<!Doctype html>
+<html lang="en-US">
+	
+	<head>
+		<title> Learning how to build a website </title>
+		<meta charset="UTF-8">
+		
+		<!-- Define keywords for search engines: -->
+		<meta name="keywords" content="HTML, CSS, XML, XHTML, JavaScript">
+		<meta name="description" content="Free Web tutorials on HTML and CSS">
+		<meta name="author" content="Hege Refsnes"> 
+		<meta charset="UTF-8">
+
+		<!-- make earlier IE versions to recognize HTML 5, keep the following comment -->
+		<!--[if lt IE 9]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<h1>My first heading</h1>
+		<p>My first paragraph</p>
+		<h6>how big is H6? let see</h6>
+		<p>the 	second paragraph</p>
+		<p>this is: <br> new line with br element, <br> in a single
+		prargraph. </p>
+	</body>
+</html>
+<hr />
+
+
+<!-- add a link -->
+<h3>add a link</h3>
+	<a href="http://www.w3schools.com">here is a link</a>
+	
+	<!-- a local link use relative URL, without http://www -->
+	<a href="html_images.asp">HTML Images</a>
+	
+	<!-- a link can be anything, e.g. a picture: -->
+	<a href="http://www.xchangecoop.org">	
+		<img src="./images/jones.jpg" alt="for screen reader" width="129" height="142">
+	</a>
+	
+	<!-- an email link: -->
+	<a href="mailto:xchange.coop@gmail.com">Email Me</a> 
+	<a href="mailto:email@echoecho.com?subject=SweetWords &body=Please send me a copy of your new program!">Email Me</a>
+<hr />
+
+
+<!-- image -->
+<body>
+	<figure>
+			<img src="./images/jones.jpg" alt="a picture of Jones (for screen reader)" width="129" height="142">   
+			<figcaption>Fig1. Jones' profile.</figcaption>
+	</figure>	
+	<img src="./images/jones.jpg" alt="a picture of Jones (for screen reader)" style="width:129px; height:142px">    using style attribute to set up width and height are more preferred.
+	<img src="./images/jones.jpg" alt="a picture of Jones (for screen reader)" style="width:15%; height:50%">  <!-- it seems width overwrite height, and adjustable on your window size. Great! -->
+	<!-- alt specifies an alternative text for an image -->
+
+	<!-- access images forma another web server  -->
+	<img src="http://www.w3schools.com/images/w3schools_green.jpg"> 
+		
+		<br> <hr />
+
+	<!-- use map to create clickable areas on a image: http://www.w3schools.com/html/tryit.asp?filename=tryhtml_images_map -->
+		<p>Click on the sun or on one of the planets to watch it closer:</p>
+		<img src="planets.gif" alt="Planets" usemap="#planetmap" style="width:145px;height:126px">
+		<map name="planetmap">
+						<!-- coord="x0 y0 x1 y1" -->
+		  <area shape="rect" coords="0,0,82,126" alt="Sun" href="sun.htm">
+		  <area shape="circle" coords="90,58,3" alt="Mercury" href="mercur.htm">
+		  <area shape="circle" coords="124,58,8" alt="Venus" href="venus.htm">
+		</map>
+</body>
+
+
+<!-- tables -->
+	<head>
+		<style>
+			table, th, td {border: 1px solid black; border-collapse: collapse; }
+			th, td {padding: 5px; text-align: left; }
+			table#t01 {width: 100%; background-color: #f1f1c1; }
+			table tr:nth-child(even) {background-color: #eee; }
+			table tr:nth-child(odd) {background-color:#efe; }
+			table#t01 th	{background-color: black; color: white; }
+		</style>
+	</head>
+
+	<body>
+		<table style="width:60%">
+			<caption>Monthly savings</caption>
+			<tr><th rowspan="2">First Name</th> <th colspan="2">Last Name</th> <th>Points</th> </tr>
+			<tr><td>Jill</td> <td>Smith</td> <td>50</td> </tr>
+			<tr> <td>Eve</td> <td>Jackson</td> <td>94</td> </tr>
+			<tr> <td>John</td> <td>Doe</td> <td>80</td> </tr>
+		</table>
+		<br>
+		<table id="t01" style="border-collapse:separate;">
+		  <tr> <th>First Name</th> <th style="text-align:center;">Last Name</th> <th>Points</th> </tr>
+		  <tr> <td>Jill</td> <td>Smith</td> <td>50</td> </tr>
+		</table>
+	</body>
+
+<br><hr />
+
+<!-- list Unordered / Ordered / Description list -->
+	<ul style="list-style-type:disc/circle/square/none">
+		<li>Coffee</li> <li>Tea</li> <li>Milk</li> </ul> <hr />  
+	
+	<!-- nested un numbered list -->
+	<ul>
+	  <li>Coffee</li>
+	  <li>Tea
+	    <ul> <li>Black tea</li> <li>Green tea</li> </ul>
+	  </li>
+	  <li>Milk</li>
+	</ul> <hr />
+
+	<ol type="I"> <!-- /i/A/a/1"> -->
+		<li>Coffee</li> <li>Tea</li> <li>Milk</li> </ol> <hr />
+
+	<dl>  <!-- dt is for term; dd is for Description -->
+	  <dt>Coffee</dt> <dd>- black hot drink</dd>
+	  <dt>Milk</dt> <dd>- white cold drink</dd>
+	</dl> <hr />
+
+<p>Use the .dl-horizontal class line up the description list side-by-side when the browser window expands:</p>
+<dl class="dl-horizontal">  not working since Bootstrap is not loaded
+    <dt>Coffee</dt>
+    <dd>- black hot drink</dd>
+    <dt>Milk</dt>
+    <dd>- white cold drink</dd>
+</dl>     <hr />
+
+
+	<head><style>
+	ul#menu {padding: 0; }
+	ul#menu li {display: inline; } /*inline makeit displayed horizontally*/
+	ul#menu li a {background-color: black; color: white; padding: 10px 20px; text-decoration: none; border-radius: 4px 4px 0 0; }
+	ul#menu li a:hover {background-color: orange; }
+	</style></head>
+
+	<body>
+	<h2>Horizontal List</h2>
+	<ul id="menu">
+	 <li><a href="/html/default.asp">HTML</a></li>
+	 <li><a href="/css/default.asp">CSS</a></li>
+	 <li><a href="/js/default.asp">JavaScript</a></li>
+	 <li><a href="/php/default.asp">PHP</a></li>
+	</ul>  
+	</body>
+
+
+<!-- Paragraph -->
+<h3>About paragraph</h3>
+	<p title="Title of a paragraph"> 
+	<!-- Title won't desplay, it just show up as a tooltip hint when you move you mouse over the paragraph -->
+	containts of a paragraph, details and explainations goes here ......
+	</p>
+<hr />
+
+
+<!-- Font and size -->
+<h3>Font size and style</h3>
+
+	<b>bold font </b> <i> italic </i> <em>emphasized </em> <br>
+	<strong>strong text: b i and m</strong> <br>
+	<br>
+	<small>small text</small> <mark>marked text (high-lighted)</mark> <del>deleted text</del>
+	<br>
+	Normal text <ins>inserted(added)</ins> Normal text <sub>subscript</sub> Normat text <sup>superscripted</sup>
+
+<hr />
+	<br> will create a new line break '<br>'
+
+	<br /> is more preferred than <br>, since it is closed. HTML5 does not require empty elements to be closed. But if you want stricter validation, or you need to make your document readable by XML parsers, you should close all HTML elements.
+
+	<!-- preset: preformatted text, preserve both spaces and line breaks -->
+	 <pre>
+	  My Bonnie lies over the ocean.
+
+	  	  Oh, bring back my Bonnie to me.
+ Oh, my Bonnie.
+	</pre>
+
+
+
+<!-- quote -->
+	<p>WWF's goal is to: <q>Build a future where people live in harmony with nature.</q></p>
+
+	<blockquote cite="http://www.worldwildlife.org/who/index.html">
+	For 50 years, WWF has been protecting the future of nature......
+	</blockquote>
+
+	<p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
+
+
+<address>
+	Written by Jon Doe.<br>
+	Visit us at:<br>
+	Example.com<br>
+	Box 564, Disneyland<br>
+	USA
+</address>
+<hr/>
+<cite>The Scream</cite> by Edward Munch. Painted in 1893.
+
+
+<!-- computercode elements -->
+	<p><kbd>File | Open...</kbd></p>  keyboard typing style
+	or <code><pre> preformatted code lines</pre></code>  <samp></samp>
+	<!-- mathematical variable -->
+	<p><var>E = m c<sup>2</sup></var></p>
+
+
+<!-- conditional comment -->
+	<!--
+	[if IE 8]>
+	    .... some HTML here ....
+	<![endif]
+	-->
+
+
+<!-- Cascading Style Sheets, CSS: -->
+element { property:value; perperty2:value2}
+	<h1 style="color:blue">This is a Blue Heading</h1> (inline CSS)
+	
+	<!-- refer to a external separate CSS file -->
+	<!-- <head><link rel="stylesheet" href="layout.css"></head> (external) -->
+
+	<head>	(internal)
+		<style>
+			h1 {color:blue;font-family:verdana;font-size:300%;}
+			p  {color:red;font-family:courier;font-size:100%;}
+			p  {border:1px solid black; padding:10px; margin:30px;}
+			table, th, td {border: 1px solid black; border-collapse: collapse/separate; }
+			
+			/*style by id*/
+				p#p01 {color: blue;} 
+
+			/*classes*/
+				.cities {background-color:grey; color:white; margin:20px; padding:20px; }
+			/*style a class for particular elements, like a paragraph, or span */
+				p.error {color: red; font-size: 160%;}
+				span.red {color:red;}
+		</style>
+	</head>
+
+
+	<!-- Common style elements/attributes/arguments of CSS -->
+		<p style="background-color:lightgrey"> lightgrey background </p>
+	
+		<h4 style="color:blue">This is a heading</h4>
+		<p style="color:red">This is a paragraph.</p>
+
+  		<p style="font-family:verdana">This is a paragraph.</p>
+
+<!-- center alignment with CSS only: no good solution yet, except anglular layout -->
+		<p style="font-family:courier;text-align:center">This is a paragraph.</p>
+		<div style="text-align:center; width=50%;height:300px; border:solid">
+	    	<p style="font-size:200%; margin:100px auto; width:60%"> this is a paragraph.</p>
+		</div>
+		<h1 style="text-align:center">Centered Heading</h1>
+
+
+
+	<!-- use id to address single elements -->
+		<head><style> p#p01 {color: blue;} </style></head>
+		<p id="p01">I am different, since I have an id</p>
+
+	<!-- use class to address groups of elements -->
+		<head><style> p.error {color: red; font-size: 160%;} </style></head>
+		<p class="error">I am different, since I am an error class in CSS style.</p> 
+
+
+<!-- set behaviors of a link: -->
+	<style>
+		a:link {color:#000000; background-color:transparent; text-decoration:none; }
+		a:visited {color:#000000; background-color:transparent; text-decoration:none; }
+		a:hover {color:#ff0000; background-color:transparent; text-decoration:underline; } 
+		a:active {color:#ff0000; background-color:transparent; text-decoration:underline; }
+	</style>
+
+	<!-- where to open a link? new page/tab or on the same tab-->
+	<a href="http://www.w3schools.com/" target="_blank">Visit W3Schools!</a> 	_black opens in NEW window or tab;
+		_self opens in the same frame (default)
+
+
+<hr />
+<!-- use id in a <a> link to created bookmark jumps -->
+	<!-- bookmark withing one page -->
+	<a href="#C4">See also Chapter 4.</a>  use #ID to refer to an ID.
+	<h2 id="C4">Chapter 4</h2>
+	<p>This chapter explains ba bla bla</p>
+
+	<!-- a linke to a bookmark of another page: -->
+	<a href="http://www.xchangecoop.org#forum-botton">xchange forum button</a> 
+
+
+
+<!-- block elements div and span -->
+	<!-- div has default new line before and after it -->
+	<!-- span has no format info -->
+
+	<div style="background-color:black; color:white; padding:20px;">
+		<h2>London</h2> <p>London is the capital city of England. It is the most populous city in the United Kingdom.</p> </div> 
+
+	<div class="cities">
+		<h2>London</h2> <p>London is the capital city of England. It is the most populous city in the United Kingdom.</p> </div>	
+
+	<h3>My <span class="red">Important</span> Heading with span</h3>
+
+
+<!-- example, regular page layout elements, style defined in layout.css, linked above, which has been commented out. Please use more class instead of ID to modify style, since ID only affect style of one element, you can do it directly in html lines-->
+	<div id="header">
+		<h1>City Gallery</h1> </div>
+
+	<div id="nav">
+		London<br> Paris<br> Tokyo<br> </div>
+
+	<div class="section">
+		<h2>London</h2>
+		<p> London is the capital city of England. It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants. </p>
+		<p> Standing on the River Thames, London has been a major settlement for two millennia, its history going back to its founding by the Romans, who named it Londinium. </p> </div>
+
+	<div class="footer"> Copyright © W3Schools.com </div>
+
+
+<!-- Responsive Web Design RWD -->
+	<h3> to use an already existing CSS framework. Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive webs. Bootstrap helps you to develop sites that look nice at any size; screen, laptop, tablet, or phone: </h3> 
+<!-- 	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	</head>
+ -->
+
+
+<!-- An iframe is used to display a web page within a web page. The attribute values are specified in pixels by default, but they can also be in percent (like "80%"). -->
+	<iframe src="http://www.xchangecoop.org" name="iframe_a" width="100%" height="600"></iframe>
+	<p><a href="http://www.w3schools.com" target="iframe_a">W3Schools.com</a></p> 
+
+
+
+
+<!-- JavaScript: -->
+
+	<p id="demo">JavaScript can change the style of an HTML element.</p>
+	<script>
+		function myFunction() {document.getElementById("demo").style.fontSize = "25px"; }
+	</script>
+	<noscript>Sorry, your browser does not support JavaScript!</noscript>
+	<button type="button" onclick="myFunction()">Click Me!</button>
+
+
+
+	<button type="button" onclick="myFunction2()">Click Me!</button>
+	<p id="demo2">This is a demonstration.</p>
+	<script>
+		function myFunction2() {document.getElementById("demo2").innerHTML = "Hello JavaScript!"; }
+	</script>
+
+
+
+<!-- Entities, special characters, Diacritical Marks: http://www.w3schools.com/html/html_entities.asp -->
+<!-- http://www.w3schools.com/html/html_symbols.asp -->
+
+
+<!-- URL Syntax - Uniform Resource Locator  -->
+<pre>
+	http://www.w3schools.com/html/default.asp 
+	scheme://host.domain:port/path/filename
+	Explanation:
+
+	scheme - defines the type of Internet service (most common is http)
+	host - defines the domain host (default host for http is www)
+	domain - defines the Internet domain name (w3schools.com)
+	port - defines the port number at the host (default for http is 80)
+	path - defines a path at the server (If omitted: the root directory of the site)
+	filename - defines the name of a document or resource
+</pre>
+
+
+<!-- Forms -->
+	<!-- full attributes of a form -->
+	<form action="action_page.php" method="GET" target="_blank" accept-charset="UTF-8"
+	enctype="application/x-www-form-urlencoded" autocomplete="off" novalidate>
+	.form elements....
+	</form>
+
+	<form action="action_page.php" autocomplete="on" id="form1">
+		<fieldset>
+			<legend>Personal information:</legend>
+			First name:<br> <input type="text" name="firstname" value="Mickey" size="80"> <br>
+			Last name:<br> <input type="text" name="lastname" value="Mouse"> <br>
+			<!-- Last name:<br> <input type="text" name="lastname" value="Mouse, I am autofocused after page loading" autofocus> <br> -->
+		</fieldset>
+
+		<!-- input types: -->
+		<input type="radio" name="sex" value="male" checked>Male <br>
+		<input type="radio" name="sex" value="female">Female <br> 
+ 		<input type="password" name="psw"> <br>
+		<input type="checkbox" name="vehicle" value="Bike">I have a bike <br>
+		<input type="checkbox" name="vehicle" value="Car">I have a car <br>
+		<input type="button" onclick="alert('Hello World!')" value="Click Me!"> <br>
+		Quantity (between 1 and 5):
+		<input type="number" name="quantity" min="0" max="100" step="10" value="30"><br>
+
+		Birthday: 
+		<input type="date" name="bday" max="1979-12-31" min="2000-01-02"> <br>
+		E-mail: 
+		<input type="email" name="email" autocomplete="on"> <br>
+		Search Google: 
+		<input type="search" name="googlesearch"> <br>
+		<input type="submit" value="Submit"> <br>
+		<input type="submit" formaction="demo_admin.asp"  value="Submit as admin"> a different submit action. <hr>
+
+		a pulldown selector.
+		<select name="cars">
+			<option value="volvo">Volvo</option>
+			<option value="saab">Saab</option>
+			<option value="fiat" selected>Fiat</option>
+			<option value="audi">Audi</option>
+		</select> <br> <br>
+
+		<textarea name="message" rows="3" cols="30"> The cat was playing in the garden.
+		</textarea> <br>
+		
+		<button type="button" onclick="alert('Hello World!')">Click Me to show an alert!</button>
+
+		<datalist id="browsers">
+		  <option value="Internet Explorer">
+		  <option value="Firefox">
+		  <option value="Chrome">
+		  <option value="Opera">
+		  <option value="Safari">
+		</datalist> <br><br><hr>
+	</form>
+
+		<form action="action_page.php" oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+		0 <input type="range" id="a" name="a" value="50"> 100 + <input type="number" id="b" name="b" value="50"> 
+			= <output name="x" for="a b">x</output>  Awesome output!
+		</form>	<hr>
+
+		<form action="action_page.php" oninput="y.value=parseInt(points.value)">
+			Select a Range <input type="range" name="points" min="0" max="10"> : <output name="y" for="points">y</output> 
+		</form>	<hr>
+
+ 
+	<!-- <input type="submit"> defines a button for submitting a form to a form-handler. The form-handler is typically a server page with a script for processing input data. The form-handler is specified in the form's action attribute: -->
+
+	<form action="action_page.php" method="GET"> </form> get is simple and visible
+	<form action="action_page.php" method="POST"> </form> post is secure and invisible
+	<!-- The action attribute defines the action to be performed when the form is submitted. The common way to submit a form to a server, is by using a submit button. Normally, the form is submitted to a web page on a web server. In the example above, a server-side script is specified to handle the submitted form: <form action="action_page.php">. If the action attribute is omitted, the action is set to the current page. -->
+
+
+	<!-- To be submitted correctly, each input field must have a name attribute. Only the input filed with a name will be submited -->
+
+
+
+
+<!-- The HTML <canvas> element is used to draw graphics, on the fly, via scripting (usually JavaScript)A canvas is a rectangular area on an HTML page. By default, a canvas has no border and no content. -->
+	<!-- http://www.w3schools.com/html/html5_canvas.asp -->
+	
+	<!DOCTYPE html>
+
+	<canvas id="myCanvas" width="200" height="100" style="border:1px solid #c3c3c3;">
+	Your browser does not support the HTML5 canvas tag.
+	</canvas>
+
+	<script>
+	var c = document.getElementById("myCanvas");
+	var ctx = c.getContext("2d");
+	ctx.fillStyle = "#FF0000";
+	ctx.fillRect(0,0,150,75);
+	</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
